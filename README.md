@@ -9,11 +9,11 @@ The lift force can be determied using the Bernoulli equtions as
 
 $$L = C_L \times \frac{\rho v^2}{2} \times S$$
 
-where $C_L$ is the lift coefficient, $\rho$ is the air density, $v$ is the speed of the aircraft and $S$ is the area of the airfoil (wing).
+where $C_L$ is the lift coefficient, $\rho$ is the air density, $v$ is the speed of the aircraft and $S$ is the area of the airfoil.
 
-The lift coefficient can be determined in terms of the angle of attack $\alpha$ and the ... as:
+The lift coefficient can be determined in terms of the angle of attack $\alpha$ and the percentage of camber of the airfoil as:
 
-$$C_L = 2 \pi (\alpha + 2p + 1 - \sqrt{4p^2+1})  .$$
+$$C_L = 2 \pi (\alpha + 2p_c + 1 - \sqrt{4p_c^2+1})  .$$
 
 The density $\rho$ can be expressed in terms of the pressure $p$ and temperature $T$ as
 
