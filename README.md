@@ -53,6 +53,13 @@ The program is implemented in C. The uncertainties in the measurements of the va
 ## Numerical values and uncertainties
 
 The range of variation of the parameters is
+| Parameter | Description | Range
+| --- | --- | --- 
+| $p$ | air pressure  | $2 \times 10^4$ Pa $\div p_0$
+| $p_s$ | static air pressure  | $0 \div 7.7 \times 10^4$ Pa (corresponding to the sound velocity of the airfoil at sea level)
+| $T$ | air temperature | 216.5 K (limit of tropopause) $\div$ 288.15 K 
+| $\alpha$ | angle of attack | $0 \div 10$ (max angle of attack for linear dependence of $C_L$)
+| $p_c$ | precentage of camber | $0 \div 0.1$ (depending on the airfoil)
 
 The constants and the parameters of the model, together with some plausible numerical values (given in SI units) and their uncertainties are given in the table below.
 
@@ -62,13 +69,17 @@ The constants and the parameters of the model, together with some plausible nume
 | $T_0$ | air temperature at sea level | 288.15 K | 0
 | $\rho_0$ | air density at sea level | 1.225 $\rm kg/m^3$ | 0
 | $p_0$ | air pressure at sea level | $1.01325 \times 10^5$ Pa | 0
-| $p$ | air pressure  | $8 \times 10^4$ Pa | $0.22$%
-| $p_s$ | static air pressure  | $5 \times 10^4$ Pa | $0.22$%
-| $T$ | air temperature | 260 K |  $0.15$%
-| $\alpha$ | angle of attack | $4^{\circ}$ | 8%
-| $p_c$ | ??? | 0.06 | 0
-| $W$ | wind speed | 25 m/s | 2%
-| $\beta$ | wind direction | $30^{\circ}$ | 8%
+| $p$ | air pressure  | $8 \times 10^4$ Pa | $0.22$% [^1]
+| $p_s$ | static air pressure  | $5 \times 10^4$ Pa | $0.22$% [^1]
+| $T$ | air temperature | 260 K |  $0.15$% [^1]
+| $\alpha$ | angle of attack | $4^{\circ}$ | 8% [^2]
+| $p_c$ | precentage of camber | 0.06 | 0 [^3]
+| $W$ | wind speed | 25 m/s | 2% [^4]
+| $\beta$ | wind direction | $30^{\circ}$ | 8% [^4]
 
 
 ## References
+[^1] C. Bonham et al., Meas. Sci
+[^2] L.
+[^3] http://airfoils.com/search/index
+[^4] E. Brown, NCAR ITN-386+STR (1993) 
