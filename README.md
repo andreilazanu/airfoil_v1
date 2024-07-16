@@ -81,5 +81,5 @@ The constants and the parameters of the model, together with some plausible nume
 ## References
 [^1]: C. Bonham et al., Meas. Sci. Techn. 29, 015002 (2018)
 [^2]: L. Sankaralingam, C. Ramprasad, Clin. J. Aeron. 33, 749 (2020)
-[^3]: http://airfoils.com/search/index
+[^3]: http://airfoils.com/index.htm
 [^4]: E. Brown, NCAR ITN-386+STR (1993) 
