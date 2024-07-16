@@ -3,7 +3,7 @@
 #include <math.h>
 
 
-# define A0 661.47  //the speed of sound at standard sea level (661.47 knots (1,225.04 km/h; 340.29 m/s)),
+# define A0 340.29  //the speed of sound at standard sea level (661.47 knots (1,225.04 km/h; 340.29 m/s)),
 # define T0 288.15 // (the temperature at standard sea level in K)
 # define RHO0 1.225 // the air density at sea level in the International Standard Atmosphere (15 °C and 1013.25 hectopascals, corresponding to a density of 1.225 kg/m3),
 # define P0 1.01325e5 // pressure at sea level
@@ -107,7 +107,7 @@ int main(int argc, const char * argv[]) {
 
     
 	
-    double v=tas(p,ps,T)*cos(alpha)+W*cos(beta);
+    double v=tas(p,ps,T)+W*cos(beta-alpha);
     printf("Lift force is %e \n",lift(c1,density,v,A));
     return 0;
 }
