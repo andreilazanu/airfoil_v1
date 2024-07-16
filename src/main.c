@@ -10,7 +10,7 @@
 
 
 static void
-loadInputs(double *  p, double *  ps, double *  T, double *  A, double *  alpha, double *  pr, double *  W, double *  beta)
+loadInputs(double *  p, double *  ps, double *  T, double *  A, double *  alpha, double *  pc, double *  W, double *  beta)
 {
 
     //*M        = UxHwDoubleDistFromSamples(empiricalTaylorFactorValues, sizeof(empiricalTaylorFactorValues)/sizeof(double));
@@ -19,7 +19,7 @@ loadInputs(double *  p, double *  ps, double *  T, double *  A, double *  alpha,
     *T      = UxHwDoubleUniformDist(260.*(1.-0.15/100), 260.*(1.+0.15/100));
     *A      = 1000.;	
     *alpha  = UxHwDoubleUniformDist(4*M_PI/180.*(1.-8/100), 4*M_PI/180.*(1.+8/100));
-    *pr     = 0.06;
+    *pc     = 0.06;
     *W      = UxHwDoubleUniformDist(25.*(1.-2/100), 25.*(1.+2/100));
     *beta   = UxHwDoubleUniformDist(30*M_PI/180.*(1.-8/100), 30*M_PI/180.*(1.+8/100));
 }
@@ -30,7 +30,7 @@ loadInputs(double *  p, double *  ps, double *  T, double *  A, double *  alpha,
     //Airfoil
 
     double alpha=4*M_PI/180.;
-    double pr=0.06;
+    double pc=0.06;
     //Wind
     double W=25;
     double beta=30*M_PI/180.;
@@ -70,21 +70,6 @@ double lift(double c1, double density, double v, double A) {
 // Model parameters p, p_s, T
 
 int main(int argc, const char * argv[]) {
-/*
-    //Atmosphere
-    double p=8.e4;
-    double ps=5.e4;
-    double T=260;
-
-    //Airfoil
-    double A=1000;
-    double alpha=4*M_PI/180.;
-    double pr=0.06;
-	
-    //Wind
-    double W=25;
-    double beta=30*M_PI/180.;
-*/
 	
     double p;
     double ps;
@@ -93,15 +78,15 @@ int main(int argc, const char * argv[]) {
     //Airfoil
     double A;
     double alpha;
-    double pr;
+    double pc;
 	
     //Wind
     double W;
     double beta;
 
-    loadInputs(&p, &ps, &T, &A, &alpha, &pr, &W, &beta);
+    loadInputs(&p, &ps, &T, &A, &alpha, &pc, &W, &beta);
 	
-    double c1=coeff1(pr,alpha);
+    double c1=coeff1(pc,alpha);
     double density=rho(p,T);
     
 
