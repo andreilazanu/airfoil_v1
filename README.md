@@ -28,12 +28,15 @@ $${\rm TAS}=\sqrt{\frac{2(p-p_s)}{p}T \frac{1}{\rho_0 T_0}} ,$$
 
 2) The supersonic regime
 
-$${\rm TAS}=\sqrt{5 \left[\frac{p-p_s}{p}+1\right]^{2/7}-1} \times\sqrt{\frac{T}{T_0}} .$$
+$${\rm TAS}=a_0\sqrt{5 \left[\frac{p-p_s}{p}+1\right]^{2/7}-1} \times\sqrt{\frac{T}{T_0}} ,$$
+
+where a_0 is the speed of sound at standard sea level.
+
+The speed of the aircraft is then determined in terms of the angle of true air speed, the angle of attack $\alpha$ and the direction of the wind with respect to the ground $\beta$ as
+
+$$v = {\rm TAS} + W \cos(\beta-\alpha)  .$$
 
 
-We are interested in the ground speed of the aircraft (GS), which can be deremined in terms of the angle of attack $\alpha$ and the direction of the wind with respect to the ground $\beta$ as
-
-$${\rm GS} = {\rm TAS} \cos(\alpha)+W \cos(\beta)  .$$
 ## Directory structure
 The files are located in the `src/` folder for the repository, containing one C source file (`main.c`) and a `config.mk` to modify the build parameters.
 ```
