@@ -24,7 +24,7 @@ where the quantities with a 0 index represent measurements at sea level.
 The speed of the aircraft is usually determined in terms of two measurements (with Pitot tubes), of the static pressure $p_s$ and the dynamic pressure $p$. The *True aircraft speed* (TAS) is determined differently in two regimes
 1) The subsonic regime
 
-$${\rm TAS}=\sqrt{\frac{2(p-p_s}{p}T \frac{1}{\rho_0 T_0}} ,$$
+$${\rm TAS}=\sqrt{\frac{2(p-p_s)}{p}T \frac{1}{\rho_0 T_0}} ,$$
 
 2) The supersonic regime
 
