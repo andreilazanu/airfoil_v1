@@ -5,12 +5,35 @@
 This program determines the lift force for an airfoil based on the Bernoulli equation and depends on the aircraft sensor measurements, the shape of the airfoil (wing) and on the wind conditions. It determines the lift force together with the uncertainties using the Signaloid Cloud Developer Platform.
 
 ## Physical principle
-1. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repository.
-2. Edit `README.md` to [adapt the “Add to signaloid.io” button's URL](#option-1--using-the-add-to-signaloidio-button).
-3. Edit the code and [configure the build](#configuring-the-build-configmk).
+The lift force can be determied using the Bernoulli equtions as
+
+$$L = C_L \times \frac{\rho v^2}{2} \times S$$
+
+where $C_L$ is the lift coefficient, $\rho$ is the air density, $v$ is the speed of the aircraft and $S$ is the area of the airfoil (wing).
+
+The lift coefficient can be determined in terms of the angle of attack $\alpha$ and the ... as:
+
+$$C_L = 2 \pi (\alpha + 2p + 1 - \sqrt{4p^2+1})  .$$
+
+The density $\rho$ can be expressed in terms of the pressure $p$ and temperature $T$ as
+
+$$ \rho = \rho_0 \frac{p}{p_0} \frac{T_0}{T}$$
+
+where the quantities with a 0 index represent measurements at sea level.
+
+The speed of the aircraft is usually determined in terms of two measurements (with Pitot tubes), of the static pressure $p_s$ and the dynamic pressure $p$. The *True aircraft speed* (TAS) is determined differently in two regimes
+1) The subsonic regime
+
+$${\rm TAS}=\sqrt{\frac{2(p-p_s}{p}T \frac{1}{\rho_0 T_0}} ,$$
+
+2) The supersonic regime
+
+$${\rm TAS}=\sqrt{5 \left[\frac{p-p_s}{p}+1\right]^{2/7}-1} \times\sqrt{\frac{T}{T_0}} .$$
 
 
+We are interested in the ground speed of the aircraft (GS), which can be deremined in terms of the angle of attack $\alpha$ and the direction of the wind with respect to the ground $\beta$ as
 
+$${\rm GS} = {\rm TAS} \cos(\alpha)+W \cos(\beta)  .$$
 ## Directory structure
 The files are located in the `src/` folder for the repository, containing one C source file (`main.c`) and a `config.mk` to modify the build parameters.
 ```
@@ -29,7 +52,6 @@ The text you need to change is (replacing the text `<your repository URL here>`)
 [<img src="https://assets.signaloid.io/add-to-signaloid-cloud-logo-light-v6.svg#gh-light-mode-only" alt="[Add to signaloid.io]" height="30">](https://signaloid.io/repositories?connect=<your repository URL here>#gh-light-mode-only)
 ```
 
-Next, go to the repository's Github page and click on the “Add to signaloid.io” button.
 ### Implementation
 The program is implemented in C. The uncertainties in the measurements of the variables are taken into account using the `UxHw` library implemented in the `uxhw.h` header file.
 ### Numerical values and uncertainties
