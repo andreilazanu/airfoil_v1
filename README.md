@@ -42,16 +42,11 @@ src/
 └── main.c
 ```
 
-## 🍰 Accessing Your GitHub Repository from the Signaloid Cloud Developer Platform
-There are two ways to access a GitHub repository from the Signaloid Cloud Developer Platform.
 
-
-The text you need to change is (replacing the text `<your repository URL here>`):
-```html
-[<img src="https://assets.signaloid.io/add-to-signaloid-cloud-logo-dark-v6.svg#gh-dark-mode-only" alt="[Add to signaloid.io]" height="30">](https://signaloid.io/repositories?connect=<your repository URL here>#gh-dark-mode-only)
-[<img src="https://assets.signaloid.io/add-to-signaloid-cloud-logo-light-v6.svg#gh-light-mode-only" alt="[Add to signaloid.io]" height="30">](https://signaloid.io/repositories?connect=<your repository URL here>#gh-light-mode-only)
-```
-
-### Implementation
+## Implementation
 The program is implemented in C. The uncertainties in the measurements of the variables are taken into account using the `UxHw` library implemented in the `uxhw.h` header file.
-### Numerical values and uncertainties
+## Numerical values and uncertainties
+
+The parameters of the model, together with some plausible numerical values (given in SI units) and their uncertainties are given in the table below.
+
+## References
