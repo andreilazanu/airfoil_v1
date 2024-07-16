@@ -50,6 +50,21 @@ src/
 The program is implemented in C. The uncertainties in the measurements of the variables are taken into account using the `UxHw` library implemented in the `uxhw.h` header file.
 ## Numerical values and uncertainties
 
-The parameters of the model, together with some plausible numerical values (given in SI units) and their uncertainties are given in the table below.
+The constants and the parameters of the model, together with some plausible numerical values (given in SI units) and their uncertainties are given in the table below.
+
+| Parameter | Description | Value | Uncertainty
+| --- | --- | --- | ---
+| $a_0$ | sound speed at sea level | 340.29 m/s | 0
+| $T_0$ | air temperature at sea level | 288.15 K | 0
+| $\rho_0$ | air density at sea level | 1.225 $\rm kg/m^3$ | 0
+| $p_0$ | air pressure at sea level | $1.01325 \times 10^5$ Pa | 0
+| $p$ | air pressure  | $8 \times 10^4$ Pa | $0.22$%
+| $p_s$ | static air pressure  | $5 \times 10^4$ Pa | $0.22$%
+| $T$ | air temperature | 260 K |  $0.15$%
+| $\alpha$ | angle of attack | $4^{\circ}$ | 8%
+| $pr$ | ??? | 0.06 | 0
+| $W$ | wind speed | 25 m/s | 2%
+| $\beta$ | wind direction | $30^{\circ}$ | 8%
+
 
 ## References
