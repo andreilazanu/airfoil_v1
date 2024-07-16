@@ -18,10 +18,10 @@ loadInputs(double *  p, double *  ps, double *  T, double *  A, double *  alpha,
     *ps     = UxHwDoubleUniformDist(5.e4*(1.-0.22/100), 5.e4*(1+0.22/100));
     *T      = UxHwDoubleUniformDist(260.*(1.-0.15/100), 260.*(1.+0.15/100));
     *A      = 1000.;	
-    *alpha  = UxHwDoubleUniformDist(4*M_PI/180.*(1.-0.15/100), 4*M_PI/180.*(1.+0.15/100));
-    *pr     = UxHwDoubleUniformDist(0.06*(1.-0.15/100), 0.06*(1.+0.15/100));
-    *W      = UxHwDoubleUniformDist(25.*(1.-0.15/100), 25.*(1.+0.15/100));
-    *beta   = UxHwDoubleUniformDist(30*M_PI/180.*(1.-0.15/100), 30*M_PI/180.*(1.+0.15/100));
+    *alpha  = UxHwDoubleUniformDist(4*M_PI/180.*(1.-8/100), 4*M_PI/180.*(1.+8/100));
+    *pr     = 0.06;
+    *W      = UxHwDoubleUniformDist(25.*(1.-2/100), 25.*(1.+2/100));
+    *beta   = UxHwDoubleUniformDist(30*M_PI/180.*(1.-8/100), 30*M_PI/180.*(1.+8/100));
 }
 
 
