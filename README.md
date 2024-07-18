@@ -30,7 +30,7 @@ $${\rm TAS}=\sqrt{\frac{2(p-p_s)}{p}T \frac{p_0}{\rho_0 T_0}} ,$$
 
 2) For high speed flight (accounting for air compressibility) [^1]
 
-$${\rm TAS}=a_0\sqrt{5 \left[\frac{p-p_s}{p}+1\right]^{2/7}-1} \times\sqrt{\frac{T}{T_0}} ,$$
+$${\rm TAS}=a_0\sqrt{5 \left[\left(\frac{p-p_s}{p}+1\right)^{2/7}-1\right]} \times\sqrt{\frac{T}{T_0}} ,$$
 
 where $a_0$ is the speed of sound at standard sea level.
 
