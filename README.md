@@ -75,7 +75,7 @@ The constants, together with plausible numerical values for the parameters of th
 | $p_s$ | static air pressure  | $5 \times 10^4$ Pa | $0.22$% [^2]
 | $T$ | air temperature | 275 K |  $0.15$% [^2]
 | $\alpha$ | angle of attack | $4^{\circ}$ | 8% [^3]
-| $p_c$ | precentage of camber | 0.06 | 0 [^4]
+| $p_c$ | precentage of camber | 0.06 [^4] | 0 
 | $W$ | wind speed | 25 m/s | 2% [^5]
 | $\beta$ | wind direction | $30^{\circ}$ | 8% [^5]
 
