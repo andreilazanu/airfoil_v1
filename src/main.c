@@ -13,27 +13,15 @@ static void
 loadInputs(double *  p, double *  ps, double *  T, double *  A, double *  alpha, double *  pc, double *  W, double *  beta)
 {
 
-    //*M        = UxHwDoubleDistFromSamples(empiricalTaylorFactorValues, sizeof(empiricalTaylorFactorValues)/sizeof(double));
     *p      = UxHwDoubleUniformDist(8.e4*(1.-0.22/100), 8.e4*(1+0.22/100));
     *ps     = UxHwDoubleUniformDist(5.e4*(1.-0.22/100), 5.e4*(1+0.22/100));
-    *T      = UxHwDoubleUniformDist(260.*(1.-0.15/100), 260.*(1.+0.15/100));
+    *T      = UxHwDoubleUniformDist(275.*(1.-0.15/100), 275.*(1.+0.15/100));
     *A      = 1000.;	
     *alpha  = UxHwDoubleUniformDist(4*M_PI/180.*(1.-8/100), 4*M_PI/180.*(1.+8/100));
     *pc     = 0.06;
     *W      = UxHwDoubleUniformDist(25.*(1.-2/100), 25.*(1.+2/100));
     *beta   = UxHwDoubleUniformDist(30*M_PI/180.*(1.-8/100), 30*M_PI/180.*(1.+8/100));
 }
-
-
-
-
-    //Airfoil
-
-    double alpha=4*M_PI/180.;
-    double pc=0.06;
-    //Wind
-    double W=25;
-    double beta=30*M_PI/180.;
 
 
 double coeff1(double percent, double alpha) {
@@ -52,13 +40,8 @@ double tas(double p, double ps, double T) {
     // This is the true air speed
     // https://en.wikipedia.org/wiki/True_airspeed
 
-    double tassubsonic=sqrt(2.*(p-ps)/p*T/(RHO0*T0));;
-    double tassupersonic=A0*sqrt(T/T0)*sqrt(5.*pow((p-ps)/p+1,(2./7.))-1.);;
-    
-   if (tassubsonic<340)
-       return tassubsonic;
-    else
-        return tassupersonic;
+   return A0*sqrt(T/T0)*sqrt(5.)*sqrt(pow((p-ps)/p+1,(2./7.))-1.);;
+
 }
 
 double lift(double c1, double density, double v, double A) {
