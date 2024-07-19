@@ -2,16 +2,16 @@
 [<img src="https://assets.signaloid.io/add-to-signaloid-cloud-logo-light-v6.png#gh-light-mode-only" alt="[Add to signaloid.io]" height="30">](https://signaloid.io/repositories?connect=https://github.com/signaloid/Signaloid-Demo-General-C#gh-light-mode-only)
 
 # Lift force for an airfoil with uncertainties on the Signaloid platform
-This program determines the lift force for an airfoil based on the Bernoulli equation and depends on the aircraft sensor measurements associated to an airplane flying at the same altitude, with the same velocity and in the same atmosphere including the wind, and the geometry of the airfoil (wing) and on the wind conditions. It determines the lift force together with the uncertainties using the Signaloid Cloud Developer Platform.
+This program determines the lift force for an airfoil based on the Bernoulli equation and depends on the aircraft sensor measurements associated to an airplane flying at the same altitude, with the same velocity and in the same atmosphere including the wind, and the geometry of the airfoil. It determines the lift force together with the uncertainties using the Signaloid Cloud Developer Platform.
 
 ## Physical principle
-The lift force can be determined using the Bernoulli eqution as
+The lift force can be determined as
 
 $$L = C_L \times \frac{\rho v^2}{2} \times S$$
 
-where $C_L$ is the lift coefficient, $\rho$ is the air density, $v$ is the speed of the aircraft and $S$ is the area of the airfoil.
+where $C_L$ is the lift coefficient, $\rho$ is the air density, $v$ is the speed of the airfoil with respect to the atmosphere and $S$ is the platform area.
 
-I have chosen to calculate the lift force using measurable quantities. Thus, at the position of the airfoil (aircraft), one measures the total pressure and the static pressure using Pitot tubes. The temperature is either obtained from meteorological services or measured by a probe in flight. The angle of attack is measured with a vane and the wind velocity using also a Pitot tube.
+I have chosen to calculate the lift force using measurable quantities. Thus, at the position of the airfoil (aircraft), one measures the total pressure $p$ and the static pressure $p_s$ using Pitot tubes. Their difference is the dynamic pressure $\rho*v^2/2$. The temperature is either obtained from meteorological services or measured by a probe in flight. The angle of attack is measured with a vane and the wind velocity using also a Pitot tube.
 
 The lift coefficient can be determined in terms of the angle of attack $\alpha$ and the percentage of camber $p_c$ of the airfoil as:
 
