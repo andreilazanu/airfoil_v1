@@ -37,19 +37,6 @@ loadInputs2(double *  p, double *  ps, double *  T, double *  A, double *  alpha
     *beta   = 0;
 }
 
-static void
-loadInputs3(double *  p, double *  ps, double *  T, double *  A, double *  alpha, double *  pc, double *  W, double *  beta)
-{
-
-    *p      = UxHwDoubleUniformDist(5.5e4*(1.-0.22/100.), 5.5e4*(1+0.22/100.));
-    *ps     = UxHwDoubleUniformDist(4.6e4*(1.-0.22/100.), 4.6e4*(1+0.22/100.));
-    *T      = UxHwDoubleUniformDist(258.*(1.-0.15/100.), 258.*(1.+0.15/100.));
-    *A      = 1000.;	
-    *alpha  = UxHwDoubleUniformDist(6.*M_PI/180.*(1.-8./100.), 6.*M_PI/180.*(1.+8./100.));
-    *pc     = 0.04;
-    *W      = UxHwDoubleUniformDist(15.*(1.-2./100.), 15.*(1.+2./100.));
-    *beta   = 0;
-}
 
 double coeff1(double percent, double alpha) {
     // lift coefficient
@@ -79,7 +66,6 @@ double mach(double p, double ps) {
 double lift(double c1, double density, double v, double A, double p, double ps) {
     // lift formula
     double m=mach(p,ps);
-    printf("Mach number %f\n",m);
     if(m<0.5)
 	    return c1*(p-ps)*A/sqrt(1.-m*m);
     else
@@ -123,12 +109,7 @@ int main(int argc, const char * argv[]) {
     v=tas(p,ps,T)+W*cos(beta-alpha);
     printf("Lift force (2) is %e \n",lift(c1,density,v,A,p,ps));
 
-    // Model 3
-    loadInputs3(&p, &ps, &T, &A, &alpha, &pc, &W, &beta);
-    c1=coeff1(pc,alpha);
-    density=rho(p,T);
-    v=tas(p,ps,T)+W*cos(beta-alpha);
-    printf("Lift force (3) is %e \n",lift(c1,density,v,A,p,ps));
+
 	
     return 0;
 }
