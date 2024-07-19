@@ -58,13 +58,14 @@ double tas(double p, double ps, double T) {
 
 }
 
-double m(double p, double ps) {
+double mach(double p, double ps) {
 	return sqrt(5.*(pow((p-ps)/p+1.,2./7.)-1.));
 	
 }
 
 double lift(double c1, double density, double v, double A, double p, double ps) {
     // lift formula
+    m=mach(p,ps);
     if(m<0.5)
 	    return c1*(p-ps)*A/sqrt(1.-m*m);
     else
