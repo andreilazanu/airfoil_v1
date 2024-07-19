@@ -17,6 +17,41 @@ The lift coefficient can be determined in terms of the angle of attack $\alpha$ 
 
 $$C_L = 2 \pi (\alpha + 2p_c + 1 - \sqrt{4p_c^2+1})  .$$
 
+The lift coefficient depends on the Mach number for subsonic flight as
+
+$$C_L(M)= C_L(M=0)/sqrt(1-M^2)$$
+
+where the Mach number is the ratio between the speeds of airsoil and sound. In the present project I analyse only subsonic fly (M<0.8).
+
+The Mach number is defined as
+
+$$M=\sqrt{5 \left[(\frac{p-p_s}{p}+1)^{2/7} \right]} .$$
+
+It is generally accepted that the lift coefficient has a very small dependence on air viscosity [^0], and it will be neglected. 
+
+The Bernoulli equation for an isoentropic fluid ($p/rho^\gamma={\rm constant}$) is
+
+$$\frac{v^2}{2}+\frac{\gamma}{\gamma-1} \frac{p}{\rho}={\rm constant},$$
+
+while the corresponding form for the incompressible fluid is
+
+$$\frac{\rho v^2}{2}+p_s=p.$$
+
+Note that the use of Bernoulli equation for the incompressible fluid produces errors less than 3% up to Mach number less than 0.5. For air, $\gamma=1.4$.
+
+Thus, for low speeds with respect to the speed of sound (M<0.5), the lift force can be estimated directly based on the measurements of $p$, $p_s$ , on the data related to airfoils geometry $(p_c, S)$ and on the angle of attack as
+
+$$L=C_L(p-ps)S$$
+
+In order to perform the correction for higher speeds, one must calculate the velocity. 
+I shall use in the project the equations corresponding to compressible air.
+One can calculate [^0a]:
+- the calibrated air speed 
+
+$$v_{cal}=\frac{2a_0^2}{\gamma-1} \left[(\frac{p-p_s}{p}+1)^{2/7} -1\right]$$
+where the index “0” indicates the value at the sea level.
+
+- the true air speed (TAS)
 Using the perfect gas equations, the density $\rho$ can be expressed in terms of the pressure $p$ and temperature $T$ as
 
 $$ \rho = \rho_0 \frac{p}{p_0} \frac{T_0}{T}$$
@@ -81,6 +116,8 @@ The constants, together with plausible numerical values for the parameters of th
 
 
 ## References
+[^0]: R. Hull, Fundamentals of Aeroplane Space Dynamics, Springer 2007
+[^0a]: Barnes McCormick, Aerodynamics, Aeronautics and Flight Mechanics, John Wiley and Sons, 1994
 [^1]: https://en.wikipedia.org/wiki/True_airspeed
 [^2]: C. Bonham et al., Meas. Sci. Techn. 29, 015002 (2018)
 [^3]: L. Sankaralingam, C. Ramprasad, Clin. J. Aeron. 33, 749 (2020)
