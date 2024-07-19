@@ -52,7 +52,7 @@ $$v_{cal}=\frac{2a_0^2}{\gamma-1} \left[\left(\frac{p-p_s}{p}+1\right)^{2/7} -1\
 
 where the index “0” indicates the value at the sea level.
 
-- the true air speed (TAS)
+- the true air speed (TAS) is the speed of the aircraft relative to the air mass through which it is flying. For isentropic flow (with the ratio of specific heats 1.4), accounting for air compressibility, TAS is calculated as 
 Using the perfect gas equations, the density $\rho$ can be expressed in terms of the pressure $p$ and temperature $T$ as
 
 $$ \rho = \rho_0 \frac{p}{p_0} \frac{T_0}{T}$$
