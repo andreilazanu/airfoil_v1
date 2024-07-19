@@ -53,24 +53,22 @@ $$v_{cal}=\frac{2a_0^2}{\gamma-1} \left[\left(\frac{p-p_s}{p}+1\right)^{2/7} -1\
 where the index “0” indicates the value at the sea level.
 
 - the true air speed (TAS) is the speed of the aircraft relative to the air mass through which it is flying. For isentropic flow (with the ratio of specific heats 1.4), accounting for air compressibility, TAS is calculated as 
-Using the perfect gas equations, the density $\rho$ can be expressed in terms of the pressure $p$ and temperature $T$ as
-
-$$ \rho = \rho_0 \frac{p}{p_0} \frac{T_0}{T}$$
-
-where the quantities with a 0 index represent the values of physical quantities at sea level for the standard atmosphere, i.e. $T_0 = 288.15 K$, $p_0=101325 Pa$, $\rho_0=1.225 kg/m^3$.
-
-The speed of the aircraft is usually determined in terms of two measurements (with Pitot tubes), of the total pressure $p$ and the static pressure $p_s$. Their difference is the dynamic pressure $\rho v^2/2$. The *True aircraft speed* (TAS) is determined differently in two regimes
-1) For low speed flight [^1]
-
-$${\rm TAS}=\sqrt{\frac{2(p-p_s)}{p}T \frac{p_0}{\rho_0 T_0}} ,$$
-
-2) For high speed flight (accounting for air compressibility) [^1]
+Using the perfect gas equations, the density $\rho$ can be expressed in terms of the pressure $p$ and temperature $T$ as [^1]
 
 $${\rm TAS}=a_0\sqrt{5 \left[\left(\frac{p-p_s}{p}+1\right)^{2/7}-1\right]} \times\sqrt{\frac{T}{T_0}} ,$$
 
 where $a_0$ is the speed of sound at standard sea level.
 
-In this calculation I shall use the second formula, as it is more precise. At low air speed, the difference between the two is small.
+The air density $\rho$ at altitude $h$, where the pressure is $p$ and the temperature $T$ is determined in the standard atmosphere [alvaro, Fund aerops eng], from the dependence of density on altitude:
+
+$$ \rho = 1.225 (1-22.558 \times 10^{-6} \times h)^4.2559$$. 
+
+
+$$ \rho = \rho_0 \frac{p}{p_0} \frac{T_0}{T}$$
+
+where the quantities with a 0 index represent the values of physical quantities at sea level for the standard atmosphere, i.e. $T_0 = 288.15 K$, $p_0=101325 Pa$, $\rho_0=1.225 kg/m^3$.
+
+
 
 The speed of the airfoil is then determined in terms of the angle of true air speed, the angle of attack $\alpha$ and the direction of the wind with respect to the ground, $\beta$, as
 
