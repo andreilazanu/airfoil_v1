@@ -65,7 +65,7 @@ double mach(double p, double ps) {
 
 double lift(double c1, double density, double v, double A, double p, double ps) {
     // lift formula
-    m=mach(p,ps);
+    double m=mach(p,ps);
     if(m<0.5)
 	    return c1*(p-ps)*A/sqrt(1.-m*m);
     else
