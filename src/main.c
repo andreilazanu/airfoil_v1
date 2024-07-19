@@ -28,7 +28,7 @@ loadInputs2(double *  p, double *  ps, double *  T, double *  A, double *  alpha
 {
 
     *p      = UxHwDoubleUniformDist(5.5e4*(1.-0.22/100.), 5.5e4*(1+0.22/100.));
-    *ps     = UxHwDoubleUniformDist(1.2e3*(1.-0.22/100.), 1.2e3*(1+0.22/100.));
+    *ps     = UxHwDoubleUniformDist(5.03e4*(1.-0.22/100.), 5.03e4*(1+0.22/100.));
     *T      = UxHwDoubleUniformDist(258.*(1.-0.15/100.), 258.*(1.+0.15/100.));
     *A      = 1000.;	
     *alpha  = UxHwDoubleUniformDist(6.*M_PI/180.*(1.-8./100.), 6.*M_PI/180.*(1.+8./100.));
