@@ -25,7 +25,7 @@ where the Mach number is the ratio between the speeds of airsoil and sound. In t
 
 The Mach number is defined as
 
-$$M=\sqrt{5 \left[(\frac{p-p_s}{p}+1)^{2/7} \right]} .$$
+$$M=\sqrt{5 \left[\left(\frac{p-p_s}{p}+1\right)^{2/7} \right]} .$$
 
 It is generally accepted that the lift coefficient has a very small dependence on air viscosity [^0], and it will be neglected. 
 
@@ -48,7 +48,8 @@ I shall use in the project the equations corresponding to compressible air.
 One can calculate [^0a]:
 - the calibrated air speed 
 
-$$v_{cal}=\frac{2a_0^2}{\gamma-1} \left[(\frac{p-p_s}{p}+1)^{2/7} -1\right]$$
+$$v_{cal}=\frac{2a_0^2}{\gamma-1} \left[\left(\frac{p-p_s}{p}+1\right)^{2/7} -1\right]$$
+
 where the index “0” indicates the value at the sea level.
 
 - the true air speed (TAS)
