@@ -63,7 +63,7 @@ double m(double p, double ps) {
 	
 }
 
-double lift(double c1, double density, double v, double A,double p, double ps) {
+double lift(double c1, double density, double v, double A, double p, double ps) {
     // lift formula
     if(m<0.5)
 	    return c1*(p-ps)*A/sqrt(1.-m*m);
@@ -99,14 +99,14 @@ int main(int argc, const char * argv[]) {
     c1=coeff1(pc,alpha);
     density=rho(p,T);
     v=tas(p,ps,T)+W*cos(beta-alpha);
-    printf("Lift force (1) is %e \n",lift(c1,density,v,A));
+    printf("Lift force (1) is %e \n",lift(c1,density,v,A,p,ps));
 
     // Model 2
     loadInputs2(&p, &ps, &T, &A, &alpha, &pc, &W, &beta);
     c1=coeff1(pc,alpha);
     density=rho(p,T);
     v=tas(p,ps,T)+W*cos(beta-alpha);
-    printf("Lift force (2) is %e \n",lift(c1,density,v,A));
+    printf("Lift force (2) is %e \n",lift(c1,density,v,A,p,ps));
     return 0;
 }
 
