@@ -94,8 +94,8 @@ The range of variation of the parameters is
 | $p$ | air pressure  | $2 \times 10^4$ Pa $\div p_0$ (considering the troposphere and the tropopause)
 | $p_s$ | static air pressure  | $0 \div 7.7 \times 10^4$ Pa (corresponding to the sound velocity of the airfoil at sea level)
 | $T$ | air temperature | 216.5 K (limit of tropopause) $\div$ 288.15 K 
-| $\alpha$ | angle of attack | $0 \div 10$ (max angle of attack for linear dependence of $C_L(\alpha)$ for most of airfoils)
-| $p_c$ | precentage of camber | $0 \div 0.1$ (depending on the airfoil)
+| $\alpha$ | angle of attack | $0 \div 8$ (max angle of attack for linear dependence of $C_L(\alpha)$ for most of airfoils)
+| $p_c$ | precentage of camber | $0 \div 0.6$ (depending on the airfoil)
 
 The constants, together with plausible numerical values for the parameters of the model (given in SI units), considered as an example and their uncertainties are given in the table below.
 
@@ -105,11 +105,11 @@ The constants, together with plausible numerical values for the parameters of th
 | $T_0$ | air temperature at sea level | 288.15 K | 0
 | $\rho_0$ | air density at sea level | 1.225 $\rm kg/m^3$ | 0
 | $p_0$ | air pressure at sea level | $1.01325 \times 10^5$ Pa | 0
-| $p$ | air pressure  | $8 \times 10^4$ Pa | $0.22$% [^2]
-| $p_s$ | static air pressure  | $5 \times 10^4$ Pa | $0.22$% [^2]
-| $T$ | air temperature | 275 K |  $0.15$% [^2]
-| $\alpha$ | angle of attack | $4^{\circ}$ | 8% [^3]
-| $p_c$ | precentage of camber | 0.06 [^4] | 0 
+| $p$ | air pressure  | $8 \times 10^4$ Pa/ $5.5 \times 10^4$ Pa | $0.22$% [^2]
+| $p_s$ | static air pressure  | $5 \times 10^4$ Pa/ $5.03 \times 10^4$ Pa | $0.22$% [^2]
+| $T$ | air temperature | 275 K/ 258 K |  $0.15$% [^2]
+| $\alpha$ | angle of attack | $4^{\circ}$/ $6^{\circ}$ | 8% [^3]
+| $p_c$ | percentage of camber | 0.06 [^4] (NACA 6409)/ 0.04 (NACA 4412) | 0 
 | $W$ | wind speed | 25 m/s | 2% [^5]
 | $\beta$ | wind direction | $30^{\circ}$ | 8% [^5]
 
