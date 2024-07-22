@@ -11,7 +11,7 @@ $$L = C_L \times \frac{\rho v^2}{2} \times S$$
 
 where $C_L$ is the lift coefficient, $\rho$ is the air density, $v$ is the speed of the airfoil with respect to the atmosphere and $S$ is the platform area.
 
-I have chosen to calculate the lift force using measurable quantities. Thus, at the position of the airfoil (aircraft), one measures the total pressure $p$ and the static pressure $p_s$ using Pitot tubes. Their difference is the dynamic pressure $\rho \times v^2/2$. The temperature is either obtained from meteorological services or measured by a probe in flight. The angle of attack is measured with a vane and the wind velocity using also a Pitot tube. The altitude is another measurable physical quantity, the altimeter being based either on the pressure measurement considering the standard atmosphere, or on the distance measurement - reflection on Earth using laser or radio waves.
+I have chosen to calculate the lift force using measurable quantities. Thus, at the position of the airfoil (aircraft), one measures the total pressure $p$ and the static pressure $p_s$ using Pitot tubes. Their difference is the dynamic pressure $\rho \times v^2/2$. The temperature is either obtained from meteorological services or measured by a probe in flight. The angle of attack is measured with a vane. The altitude is another measurable physical quantity, the altimeter being based either on the pressure measurement considering the standard atmosphere, or on the distance measurement - reflection on Earth using laser or radio waves.
 
 The lift coefficient can be determined in terms of the angle of attack $\alpha$ and the percentage of camber $p_c$ of the airfoil as:
 
