@@ -61,8 +61,9 @@ where $a_0$ is the speed of sound at standard sea level.
 
 The air density $\rho$ at altitude $h$, where the pressure is $p$ is determined in the standard atmosphere [^alv], from the dependence of density on altitude:
 
-$$ \rho = 1.225 (1-22.558 \times 10^{-6} \times h)^4.2559$$. 
+$$\rho = 1.225 (1-22.558 \times 10^{-6} \times h)^4.2559$$. 
 
+If one measures the temperature T (instead of the altitude), the density is determined from the gas equation as:
 
 $$ \rho = \rho_0 \frac{p}{p_0} \frac{T_0}{T}$$
 
