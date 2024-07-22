@@ -11,7 +11,7 @@ $$L = C_L \times \frac{\rho v^2}{2} \times S$$
 
 where $C_L$ is the lift coefficient, $\rho$ is the air density, $v$ is the speed of the airfoil with respect to the atmosphere and $S$ is the platform area.
 
-I have chosen to calculate the lift force using measurable quantities. Thus, at the position of the airfoil (aircraft), one measures the total pressure $p$ and the static pressure $p_s$ using Pitot tubes. Their difference is the dynamic pressure $\rho*v^2/2$. The temperature is either obtained from meteorological services or measured by a probe in flight. The angle of attack is measured with a vane and the wind velocity using also a Pitot tube. The altitude is another measurable physical quantity, the altimeter being based either on the pressure measurement considering the standard atmosphere, or on the distance measurement - reflection on Earth using laser or radio waves.
+I have chosen to calculate the lift force using measurable quantities. Thus, at the position of the airfoil (aircraft), one measures the total pressure $p$ and the static pressure $p_s$ using Pitot tubes. Their difference is the dynamic pressure $\rho \times v^2/2$. The temperature is either obtained from meteorological services or measured by a probe in flight. The angle of attack is measured with a vane and the wind velocity using also a Pitot tube. The altitude is another measurable physical quantity, the altimeter being based either on the pressure measurement considering the standard atmosphere, or on the distance measurement - reflection on Earth using laser or radio waves.
 
 The lift coefficient can be determined in terms of the angle of attack $\alpha$ and the percentage of camber $p_c$ of the airfoil as:
 
@@ -52,8 +52,7 @@ $$v_{cal}=\frac{2a_0^2}{\gamma-1} \left[\left(\frac{p-p_s}{p}+1\right)^{2/7} -1\
 
 where the index “0” indicates the value at the sea level.
 
-- the true air speed (TAS) is the speed of the aircraft relative to the air mass through which it is flying. For isentropic flow (with the ratio of specific heats 1.4), accounting for air compressibility, TAS is calculated as 
-Using the perfect gas equations, the density $\rho$ can be expressed in terms of the pressure $p$ and temperature $T$ as [^1]
+- the true air speed (TAS) is the speed of the aircraft relative to the air mass through which it is flying. For isentropic flow (with the ratio of specific heats 1.4), accounting for air compressibility, TAS is calculated as [^1]
 
 $${\rm TAS}=a_0\sqrt{5 \left[\left(\frac{p-p_s}{p}+1\right)^{2/7}-1\right]} \times\sqrt{\frac{T}{T_0}} ,$$
 
@@ -68,12 +67,12 @@ If one measures the temperature T (instead of the altitude), the density is dete
 
 $$ \rho = \rho_0 \frac{p}{p_0} \frac{T_0}{T}$$
 
-where the quantities with a 0 index represent the values of physical quantities at sea level for the standard atmosphere, i.e. $T_0 = 288.15 K$, $p_0=101325 Pa$, $\rho_0=1.225 kg/m^3$. In the project I have used the temperature in calculating the density. One can now calculate now the lift force L.
+where the quantities with a 0 index represent the values of physical quantities at sea level for the standard atmosphere, i.e. $T_0 = 288.15 K$, $p_0=101325 Pa$, $\rho_0=1.225 kg/m^3$. In the project I have used the temperature in calculating the density. One can now calculate the lift force L.
 
 
 
 
-The wind is already kept into account, as the speed (TAS) in the dynamic pressure is that of the airfoil with respect to the air surrounding it.
+The wind is already kept into account, as the speed (TAS) in the lift force is that of the airfoil with respect to the air surrounding it. Humidity influences lift by air density, which is lower for humid air than for dry air. For low Mach numbers, the lift force calcualted through the difference of measured pressures does not change.
 
 
 ## Directory structure
