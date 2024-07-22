@@ -23,7 +23,7 @@ $$C_L(M)= C_L(M=0)/\sqrt{1-M^2}$$
 
 where the Mach number is the ratio between the speeds of airsoil and sound. In the present project I analyse only subsonic fly (M<0.8).
 
-The Mach number is defined as
+The Mach number is calculated as
 
 $$M=\sqrt{5 \left[\left(\frac{p-p_s}{p}+1\right)^{2/7} \right]} .$$
 
