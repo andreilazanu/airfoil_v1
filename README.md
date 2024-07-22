@@ -50,13 +50,13 @@ One can calculate [^0a]:
 
 $$v_{cal}=\frac{2a_0^2}{\gamma-1} \left[\left(\frac{p-p_s}{p}+1\right)^{2/7} -1\right]$$
 
-where the index “0” indicates the value at the sea level.
+where $a_0$ is the speed of sound at standard sea level.
 
 - the true air speed (TAS) is the speed of the aircraft relative to the air mass through which it is flying. For isentropic flow (with the ratio of specific heats 1.4), accounting for air compressibility, TAS is calculated as [^1]
 
 $${\rm TAS}=a_0\sqrt{5 \left[\left(\frac{p-p_s}{p}+1\right)^{2/7}-1\right]} \times\sqrt{\frac{T}{T_0}} ,$$
 
-where $a_0$ is the speed of sound at standard sea level.
+where the quantities with a 0 index represent the values of physical quantities at sea level for the standard atmosphere, i.e. $T_0 = 288.15 K$, $p_0=101325 Pa$, $\rho_0=1.225 kg/m^3$.
 
 The air density $\rho$ at altitude $h$, where the pressure is $p$ is determined in the standard atmosphere [^alv], from the dependence of the density on altitude:
 
@@ -67,7 +67,7 @@ If one measures the temperature T (instead of the altitude), the density is dete
 
 $$ \rho = \rho_0 \frac{p}{p_0} \frac{T_0}{T}$$
 
-where the quantities with a 0 index represent the values of physical quantities at sea level for the standard atmosphere, i.e. $T_0 = 288.15 K$, $p_0=101325 Pa$, $\rho_0=1.225 kg/m^3$. In the project I have used the temperature in calculating the density. One can now calculate the lift force L.
+In the project I have used the temperature in calculating the density. One can now calculate the lift force L.
 
 
 
