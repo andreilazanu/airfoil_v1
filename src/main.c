@@ -10,7 +10,7 @@
 
 
 static void
-loadInputs(double *  p, double *  ps, double *  T, double *  S, double *  alpha, double *  pc, double *  W, double *  beta)
+loadInputs(double *  p, double *  ps, double *  T, double *  S, double *  alpha, double *  pc)
 {
 
     *p      = UxHwDoubleUniformDist(8.e4*(1.-0.22/100.), 8.e4*(1+0.22/100.));
@@ -19,12 +19,10 @@ loadInputs(double *  p, double *  ps, double *  T, double *  S, double *  alpha,
     *S      = 1000.;	
     *alpha  = UxHwDoubleUniformDist(4.*M_PI/180.*(1.-8./100.), 4.*M_PI/180.*(1.+8./100.));
     *pc     = 0.06;
-    *W      = UxHwDoubleUniformDist(25.*(1.-2./100.), 25.*(1.+2./100.));
-    *beta   = UxHwDoubleUniformDist(30.*M_PI/180.*(1.-8./100.), 30.*M_PI/180.*(1.+8/100.));
 }
 
 static void
-loadInputs2(double *  p, double *  ps, double *  T, double *  S, double *  alpha, double *  pc, double *  W, double *  beta)
+loadInputs2(double *  p, double *  ps, double *  T, double *  S, double *  alpha, double *  pc)
 {
 
     *p      = UxHwDoubleUniformDist(5.5e4*(1.-0.22/100.), 5.5e4*(1+0.22/100.));
@@ -33,8 +31,6 @@ loadInputs2(double *  p, double *  ps, double *  T, double *  S, double *  alpha
     *S      = 1000.;	
     *alpha  = UxHwDoubleUniformDist(6.*M_PI/180.*(1.-8./100.), 6.*M_PI/180.*(1.+8./100.));
     *pc     = 0.04;
-    *W      = UxHwDoubleUniformDist(15.*(1.-2./100.), 15.*(1.+2./100.));
-    *beta   = 0;
 }
 
 
@@ -86,27 +82,25 @@ int main(int argc, const char * argv[]) {
     double S;
     double alpha;
     double pc;
-	
-    //Wind
-    double W;
-    double beta;
 
     double c1;
     double density;
     double v;
 
     // Model 1
-    loadInputs(&p, &ps, &T, &S, &alpha, &pc, &W, &beta);
+    loadInputs(&p, &ps, &T, &S, &alpha, &pc);
     c1=coeff1(pc,alpha);
     density=rho(p,T);
-    v=tas(p,ps,T)+W*cos(beta-alpha);
+    v=tas(p,ps,T);
+    printf("rho: %e; tas: %e\n",density,v);
     printf("Lift force (1) is %e \n",lift(c1,density,v,S,p,ps));
 
     // Model 2
-    loadInputs2(&p, &ps, &T, &S, &alpha, &pc, &W, &beta);
+    loadInputs2(&p, &ps, &T, &S, &alpha, &pc);
     c1=coeff1(pc,alpha);
     density=rho(p,T);
-    v=tas(p,ps,T)+W*cos(beta-alpha);
+    v=tas(p,ps,T);
+    printf("rho: %e; tas: %e\n",density,v);
     printf("Lift force (2) is %e \n",lift(c1,density,v,S,p,ps));
 
 
