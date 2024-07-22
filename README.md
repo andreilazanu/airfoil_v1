@@ -19,7 +19,7 @@ $$C_L = 2 \pi (\alpha + 2p_c + 1 - \sqrt{4p_c^2+1})  .$$
 
 The lift coefficient depends on the Mach number for subsonic flight as
 
-$$C_L(M)= C_L(M=0)/sqrt(1-M^2)$$
+$$C_L(M)= C_L(M=0)/\sqrt(1-M^2)$$
 
 where the Mach number is the ratio between the speeds of airsoil and sound. In the present project I analyse only subsonic fly (M<0.8).
 
