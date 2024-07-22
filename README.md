@@ -97,7 +97,7 @@ The range of variation of the parameters is
 | $\alpha$ | angle of attack | $0 \div 8$ (max angle of attack for linear dependence of $C_L(\alpha)$ for most of airfoils)
 | $p_c$ | precentage of camber | $0 \div 0.6$ (depending on the airfoil)
 
-The constants, together with plausible numerical values for the parameters of the model (given in SI units), considered as an example and their uncertainties are given in the table below.
+The constants, together with plausible numerical values for the parameters of the model (given in SI units), considered as in two examples and their uncertainties are given in the table below.
 
 | Parameter | Description | Value | Uncertainty
 | --- | --- | --- | ---
