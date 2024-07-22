@@ -11,7 +11,7 @@ $$L = C_L \times \frac{\rho v^2}{2} \times S$$
 
 where $C_L$ is the lift coefficient, $\rho$ is the air density, $v$ is the speed of the airfoil with respect to the atmosphere and $S$ is the platform area.
 
-I have chosen to calculate the lift force using measurable quantities. Thus, at the position of the airfoil (aircraft), one measures the total pressure $p$ and the static pressure $p_s$ using Pitot tubes. Their difference is the dynamic pressure $\rho*v^2/2$. The temperature is either obtained from meteorological services or measured by a probe in flight. The angle of attack is measured with a vane and the wind velocity using also a Pitot tube.
+I have chosen to calculate the lift force using measurable quantities. Thus, at the position of the airfoil (aircraft), one measures the total pressure $p$ and the static pressure $p_s$ using Pitot tubes. Their difference is the dynamic pressure $\rho*v^2/2$. The temperature is either obtained from meteorological services or measured by a probe in flight. The angle of attack is measured with a vane and the wind velocity using also a Pitot tube. The altitude is another measurable physical quantity, the altimeter being based either on the pressure measurement considering the standard atmosphere, or on the distance measurement - reflection on Earth using laser or radio waves.
 
 The lift coefficient can be determined in terms of the angle of attack $\alpha$ and the percentage of camber $p_c$ of the airfoil as:
 
@@ -31,7 +31,7 @@ It is generally accepted that the lift coefficient has a very small dependence o
 
 The Bernoulli equation for an isoentropic fluid ($p/rho^\gamma={\rm constant}$) is
 
-$$\frac{v^2}{2}+\frac{\gamma}{\gamma-1} \frac{p}{\rho}={\rm constant},$$
+$$\frac{v^2}{2}+\frac{\gamma}{\gamma-1} \frac{p_s}{\rho}={\rm constant},$$
 
 while the corresponding form for the incompressible fluid is
 
@@ -43,7 +43,7 @@ Thus, for low speeds with respect to the speed of sound (M<0.5), the lift force 
 
 $$L=C_L(p-ps)S$$
 
-In order to perform the correction for higher speeds, one must calculate the velocity. 
+In order to perform the correction for higher speeds, one must calculate the velocity and air density. 
 I shall use in the project the equations corresponding to compressible air.
 One can calculate [^0a]:
 - the calibrated air speed 
@@ -59,20 +59,19 @@ $${\rm TAS}=a_0\sqrt{5 \left[\left(\frac{p-p_s}{p}+1\right)^{2/7}-1\right]} \tim
 
 where $a_0$ is the speed of sound at standard sea level.
 
-The air density $\rho$ at altitude $h$, where the pressure is $p$ and the temperature $T$ is determined in the standard atmosphere [alvaro, Fund aerops eng], from the dependence of density on altitude:
+The air density $\rho$ at altitude $h$, where the pressure is $p$ is determined in the standard atmosphere [^alv], from the dependence of density on altitude:
 
 $$ \rho = 1.225 (1-22.558 \times 10^{-6} \times h)^4.2559$$. 
 
 
 $$ \rho = \rho_0 \frac{p}{p_0} \frac{T_0}{T}$$
 
-where the quantities with a 0 index represent the values of physical quantities at sea level for the standard atmosphere, i.e. $T_0 = 288.15 K$, $p_0=101325 Pa$, $\rho_0=1.225 kg/m^3$.
+where the quantities with a 0 index represent the values of physical quantities at sea level for the standard atmosphere, i.e. $T_0 = 288.15 K$, $p_0=101325 Pa$, $\rho_0=1.225 kg/m^3$. In the project I have used the temperature in calculating the density. One can now calculate now the lift force L.
 
 
 
-The speed of the airfoil is then determined in terms of the angle of true air speed, the angle of attack $\alpha$ and the direction of the wind with respect to the ground, $\beta$, as
 
-$$v = {\rm TAS} + W \cos(\beta-\alpha)  .$$
+The wind is already kept into account, as the speed (TAS) in the dynamic pressure is that of the airfoil with respect to the air surrounding it.
 
 
 ## Directory structure
@@ -110,11 +109,10 @@ The constants, together with plausible numerical values for the parameters of th
 | $T$ | air temperature | 275 K/ 258 K |  $0.15$% [^2]
 | $\alpha$ | angle of attack | $4^{\circ}$/ $6^{\circ}$ | 8% [^3]
 | $p_c$ | percentage of camber | 0.06 [^4] (NACA 6409)/ 0.04 (NACA 4412) | 0 
-| $W$ | wind speed | 25 m/s | 2% [^5]
-| $\beta$ | wind direction | $30^{\circ}$ | 8% [^5]
 
 
 ## References
+[^alv]: M Arnedo, Fundamentals of Aerospace Engineering, Libretexts, 2024
 [^0]: R. Hull, Fundamentals of Aeroplane Space Dynamics, Springer 2007
 [^0a]: Barnes McCormick, Aerodynamics, Aeronautics and Flight Mechanics, John Wiley and Sons, 1994
 [^1]: https://en.wikipedia.org/wiki/True_airspeed
