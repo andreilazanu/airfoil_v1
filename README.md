@@ -29,7 +29,7 @@ $$M=\sqrt{5 \left[\left(\frac{p-p_s}{p}+1\right)^{2/7} \right]} .$$
 
 It is generally accepted that the lift coefficient has a very small dependence on air viscosity [^0], and it will be neglected. 
 
-The Bernoulli equation for an isoentropic fluid ($p/rho^\gamma={\rm constant}$) is
+The Bernoulli equation for an isoentropic fluid ($p/\rho^\gamma=$ constant) is
 
 $$\frac{v^2}{2}+\frac{\gamma}{\gamma-1} \frac{p_s}{\rho}={\rm constant},$$
 
