@@ -92,7 +92,6 @@ int main(int argc, const char * argv[]) {
     c1=coeff1(pc,alpha);
     density=rho(p,T);
     v=tas(p,ps,T);
-    printf("rho: %e; tas: %e\n",density,v);
     printf("Lift force (1) is %e \n",lift(c1,density,v,S,p,ps));
 
     // Model 2
@@ -100,7 +99,6 @@ int main(int argc, const char * argv[]) {
     c1=coeff1(pc,alpha);
     density=rho(p,T);
     v=tas(p,ps,T);
-    printf("rho: %e; tas: %e\n",density,v);
     printf("Lift force (2) is %e \n",lift(c1,density,v,S,p,ps));
 
 
